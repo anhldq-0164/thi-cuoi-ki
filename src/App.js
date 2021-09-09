@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import UserList from './thi'
 function App() {
+  const [init,name,changeName ,deleteUser,listUser] = UserList()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>学生一覧：[{init.map(name => name).join(',')}]</p>
+      <p>削除値を入力してください。</p>
+      <input  value={name} onChange={changeName} />
+      <div><button onClick={deleteUser} >確定</button></div>
+      <p>削除する名前： {name}</p>
+      <p>新しい一覧：[{listUser.map(name => name).join(',')}]</p>
     </div>
   );
 }

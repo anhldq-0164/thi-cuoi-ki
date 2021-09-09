@@ -1,7 +1,11 @@
 .App {
-  text-align: center;
+  margin: 50px;
 }
-
+button{
+  margin-left: 350px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
